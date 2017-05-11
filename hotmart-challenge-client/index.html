@@ -39,7 +39,7 @@
     <h2 class="lead">Upload Arquivo chunked</h2>
     <ul class="nav nav-tabs">
         <li class="active"><a href="index.html">Basic Plus UI</a></li>
-        <li><a href="basic.html">Basic</a></li>
+
         
     </ul>
     <br>
@@ -48,6 +48,8 @@
         <p>Esta pagina foi construinda baseado no exemplo disponível <a href="https://blueimp.github.io/jQuery-File-Upload/" target="_blank">CLIQUE AQUI</a></p>
 
         <p>Swagger: <a href="http://localhost:8080/swagger-ui.html" target="_blank">CLIQUE AQUI</a></p>
+
+        <p>API Doc: <a href="http://localhost:8080/v2/api-docs" target="_blank">CLIQUE AQUI</a></p>
 
     </blockquote>
     <br>
@@ -151,9 +153,7 @@
                     <span>{%=file.name%}</span>
                 {% } %}
             </p>
-            {% if (file.error) { %}
-                <div><span class="label label-danger">Error</span> {%=file.error%}</div>
-            {% } %}
+
         </td>
         <td>
             <span class="size">{%=o.formatFileSize(file.size)%}</span>

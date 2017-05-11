@@ -24,11 +24,14 @@ $(function () {
     $('#fileupload').fileupload({
         maxChunkSize: 1024 * 1024
     })
-    .on('fileuploadchunksend', function (e, data) {
+    .on('fileuploaddone', function (e, data) {
 
     })
+    .on('fileuploadchunksend', function (e, data) {
+        data.headers.idUser = 'Teste';
+    })
     .on('fileuploadchunkdone', function (e, data) {
-        $('<p/>').text(data).appendTo('#files');
+        
     })
     .on('fileuploadchunkfail', function (e, data) {
 
